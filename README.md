@@ -1,3 +1,10 @@
+## Usage
+After login to docker container there is a command debug which enable/disable xdebug and restart php-fpm service. 
+```nashorn js
+debug [on|off]
+```
+![Example usage](doc/example.gif "Exammple")
+
 ## Sample docker-compose configuration for this image
 ```yaml
 version: "3.1"
