@@ -10,6 +10,9 @@ RUN echo "xdebug.remote_connect_back=on" > /usr/local/etc/php/conf.d/z-xdebug.in
 ADD scripts/debug /usr/bin/debug
 RUN chmod 755 /usr/bin/debug
 
+# turn xdebug off as default
+RUN debug off;
+
 # saving .bash_history immediate
 RUN echo shopt -s histappend >> ~/.bashrc
 RUN echo 'PROMPT_COMMAND="history -a;$PROMPT_COMMAND"' >> ~/.bashrc
