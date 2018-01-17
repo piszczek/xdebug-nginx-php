@@ -1,4 +1,4 @@
-FROM richarvey/nginx-php-fpm:1.3.8
+FROM richarvey/nginx-php-fpm:dev-php7
 
 # enable xdebug as default
 ENV ENABLE_XDEBUG=1
