@@ -11,7 +11,7 @@ ADD scripts/debug /usr/bin/debug
 RUN chmod 755 /usr/bin/debug
 
 # turn xdebug off as default
-RUN debug off;
+# RUN debug off;
 
 # saving .bash_history immediate
 RUN echo shopt -s histappend >> ~/.bashrc
