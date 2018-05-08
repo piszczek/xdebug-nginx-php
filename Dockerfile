@@ -10,6 +10,8 @@ RUN mkdir -p /usr/local/etc/php/conf.d && echo "xdebug.remote_connect_back=on" >
 ADD scripts/debug /usr/bin/debug
 RUN chmod 755 /usr/bin/debug
 
+# install bcmath
+RUN docker-php-ext-install bcmath
 # turn xdebug off as default
 # RUN debug off;
 
