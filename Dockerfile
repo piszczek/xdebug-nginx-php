@@ -1,10 +1,10 @@
 FROM richarvey/nginx-php-fpm:1.3.8
 
-# enable xdebug as default
+# set information to install XDEBUG
 ENV ENABLE_XDEBUG=1
 
 # fix xdebug configuration
-RUN echo "xdebug.remote_connect_back=on" > /usr/local/etc/php/conf.d/z-xdebug.ini;
+RUN mkdir -p /usr/local/etc/php/conf.d && echo "xdebug.remote_connect_back=on" > /usr/local/etc/php/conf.d/z-xdebug.ini;
 
 # add xdebug switcher (xdebug on / xdebug off)
 ADD scripts/debug /usr/bin/debug
